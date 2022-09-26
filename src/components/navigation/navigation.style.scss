@@ -1,0 +1,244 @@
+@import "./../SCSS/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600&family=Inter:wght@400;500&family=Syne:wght@400;500&display=swap");
+
+.navigation {
+  animation: slide-down 2s forwards;
+  font-family: "Inter";
+  margin: -25px 0 40px 0;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background-color: $nav-color;
+
+  .nav-links-container {
+    transition: background-color 0.5s ease-in-out 1s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 6vw;
+
+    .nav-link {
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 0 10px;
+      color: $text-dark-color;
+      font-weight: 500;
+      overflow: hidden;
+      &:hover {
+        cursor: pointer;
+        span {
+          display: inline-block;
+          animation: text-scroll-effect 0.5s forwards;
+        }
+      }
+    }
+
+    .active {
+      font-weight: 600;
+    }
+  }
+
+  .nav-button-container {
+    display: flex;
+    font-weight: 500;
+    margin-right: 6vw;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin: 0 5px;
+      color: $text-dark-color;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .nav-b1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 10px;
+      margin: 15px 0px;
+      border-radius: 8px;
+
+      &:active,
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.23);
+      }
+    }
+
+    .nav-b2 {
+      color: $text-light-color;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 24px;
+      margin: 15px 10px;
+      background: $main-theme-light;
+      border-radius: 8px;
+
+      &:active,
+      &:hover {
+        background-color: $main-theme-light;
+      }
+    }
+  }
+  @media only screen and (max-width: $nav-response) {
+    .nav-button-container {
+      width: 100%;
+      margin: 10px 5px;
+
+      .nav-b3 {
+        display: none;
+      }
+    }
+  }
+
+  .nav-link-header {
+    a {
+      text-decoration: none;
+      color: $text-dark-color;
+    }
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Syne";
+    margin-left: -4vw;
+  }
+
+  @media only screen and (max-width: $nav-response) {
+    .nav-link-header {
+      position: absolute;
+      top: 19px;
+      left: 6vw;
+    }
+  }
+
+  .nav-toggle {
+    color: $text-dark-color;
+    position: absolute;
+    font-size: 29px;
+    top: 19px;
+    right: 6vw;
+    display: none;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav-b3-duplicate {
+    text-decoration: none;
+    color: $text-dark-color;
+    position: absolute;
+    font-size: 22px;
+    top: 28px;
+    right: 15vw;
+  }
+  @media only screen and (max-width: 450px) {
+    .nav-b3-duplicate {
+      right: 20vw;
+    }
+  }
+
+  @media only screen and (max-width: $nav-response) {
+    .nav-toggle {
+      display: initial;
+    }
+
+    .nav-links-container {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin: 0;
+      margin-top: 50px;
+
+      .nav-link {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .nav-links-container[open] {
+      animation: bounce-in 0.5s forwards;
+    }
+
+    @keyframes bounce-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $nav-response) {
+  .navigation {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 30px;
+  }
+}
+
+.unhider {
+  display: flex;
+}
+
+.hider {
+  display: none;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 50px);
+  }
+}
+
+@keyframes text-scroll-effect {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(7deg) scale(1.2);
+  }
+
+  50% {
+    transform: translate(0, -25px) rotate(0deg) scale(1);
+  }
+
+  51% {
+    transform: translate(0, 25px);
+  }
+
+  75% {
+    transform: rotate(-7deg) scale(1.2);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}

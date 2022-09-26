@@ -1,0 +1,94 @@
+@import "../SCSS/variables.scss";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-theme-dark2;
+  width: 100%;
+  margin-top: 60px;
+  padding-bottom: 55px;
+  padding-top: 90px;
+  color: #fff;
+  font-family: "Abhaya Libre";
+
+  p {
+    margin: 0;
+  }
+
+  .F-header {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "Abhaya Libre";
+  }
+
+  .F-button {
+    button {
+      background-color: $main-theme;
+      color: $main-theme-dark;
+      padding: 10px;
+      text-decoration: none;
+      border: none;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+  }
+  .F-mid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin: 50px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+
+    p {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .F-mid-nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        margin: 0 10px;
+      }
+    }
+    .F-mid-social {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      span {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .F-line {
+    width: 85%;
+    border-bottom: 1px solid #e6ddd47e;
+    margin: 5px 0;
+  }
+
+  .F-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 0;
+    width: 100%;
+
+    p {
+      font-weight: 400;
+      font-size: 15px;
+    }
+  }
+}

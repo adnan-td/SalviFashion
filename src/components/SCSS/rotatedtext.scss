@@ -1,0 +1,8 @@
+@mixin rotated-text($num-letters: 18, $angle-span: 360deg, $angle-offset: 0deg) {
+  $angle-per-char: calc($angle-span / $num-letters);
+  @for $i from 1 through $num-letters {
+    .char#{$i} {
+      transform: rotate(calc($angle-offset + $angle-per-char * $i));
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@import "../../../components/SCSS/variables.scss";
+.home-about {
+  width: 100vw;
+  padding: 0 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 2fr 3fr 3fr;
+
+  .home-circle-a {
+    margin: 0;
+  }
+
+  .home-left-about {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+
+    p {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 80px;
+      font-family: "Abhaya Libre";
+      margin: 0;
+      font-weight: bold;
+    }
+
+    div {
+      border-right: 4px solid #333333;
+      border-radius: 0px 3px 3px 0px;
+      width: 20px;
+      height: 60vh;
+    }
+  }
+
+  .home-center-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    flex-direction: column;
+
+    h3 {
+      font-size: 55px;
+      font-family: "Abhaya Libre";
+      font-style: normal;
+      font-weight: 700;
+      color: $main-theme-light;
+      margin: 10px 0;
+    }
+
+    .hca-p1 {
+      max-width: 500px;
+      line-height: 27px;
+    }
+    .hca-p2 {
+      max-width: 500px;
+      line-height: 27px;
+    }
+    .hca-grid {
+      display: grid;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 30px 0;
+      gap: 20px;
+
+      .hca-grid-item {
+        h4 {
+          font-size: 25px;
+          font-family: "Abhaya Libre";
+          font-style: normal;
+          font-weight: 700;
+          color: $main-theme-dark;
+          margin: 10px 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .home-right-about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    flex-direction: column;
+    .hra-img-container {
+      img {
+        height: 50vh;
+      }
+    }
+    .hra-lower {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hra-underline {
+        border-bottom: 4px solid #333333;
+        border-radius: 0px 0px 4px 4px;
+        width: 10vw;
+        height: 10px;
+      }
+    }
+  }
+}
