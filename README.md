@@ -1,6 +1,6 @@
 # SalviFashion
 
-A Frontend, React "E-Commerce" Web-application.\
+A Frontend, React "E-Commerce" Web-application.
 
 ## Here's how it looks-like
 
